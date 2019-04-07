@@ -48,11 +48,10 @@ def multiple_ints(first_value, second_value):
     Returns:
         Product of elements
     """
-    try:
-        if type(first_value) or type(second_value) != int:
-            raise ValueError
-    except ValueError:
-        return first_value*second_value
+    if type(first_value) == type(second_value) == int:
+        return first_value * second_value
+    else:
+        raise ValueError("first or second value is not int")
 
 def multiple_ints_with_conversion(first_value, second_value):
     """
@@ -84,7 +83,7 @@ def multiple_ints_with_conversion(first_value, second_value):
     try:
         return int(first_value) * int(second_value)
     except:
-        raise ValueError('Not valid input data')
+        raise OurAwesomeException('Not valid input data')
 
 
 def is_word_in_text(word, text):
