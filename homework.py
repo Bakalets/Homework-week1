@@ -82,7 +82,7 @@ def multiple_ints_with_conversion(first_value, second_value):
     """
     try:
         return int(first_value) * int(second_value)
-    except:
+    except ValueError:
         raise OurAwesomeException('Not valid input data')
 
 
@@ -103,7 +103,10 @@ def is_word_in_text(word, text):
 
     """
 
-    return word in text
+    if text.find(word) !=-1:
+        return True
+    else:
+        return False
 
 
 def some_loop_exercise():
