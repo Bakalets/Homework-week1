@@ -103,10 +103,7 @@ def is_word_in_text(word, text):
 
     """
 
-    if text.find(word) !=-1:
-        return True
-    else:
-        return False
+    return word in text.split()
 
 
 def some_loop_exercise():
